@@ -1,1 +1,78 @@
-# LinkedIn-Post-Generator
+# LinkedIn Post Generator
+
+I built this Streamlit application to help generate engaging LinkedIn posts using LLMs. It selects from different topics, lengths, and languages to create content that feels authentic and professional.
+
+## Why I Built This
+
+After noticing how time-consuming it can be to write quality LinkedIn posts consistently, I wanted to create a tool that could help streamline this process. The app leverages Llama3-70B (via Groq's API) to generate posts that match specific topics and styles.
+
+## Features
+
+- **Topic Selection**: Pick from various professional topics I've categorized
+- **Adjustable Length**: Generate short, medium, or long posts depending on your needs
+- **Language Options**: Works with both English and Hinglish content
+- **Few-Shot Learning**: I implemented examples to help the model understand the right tone and style
+- **Simple UI**: Built with Streamlit for a straightforward user experience
+
+## Setting Up
+
+1. Clone my repo:
+```bash
+git clone https://github.com/maybemnv/LinkedIn-Post-Generator.git
+cd linkedin-post-generator
+```
+
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+3. You'll need to set up a `.env` file with your own Groq API key:
+```
+GROQ_API_KEY=your_groq_api_key_here
+```
+
+## How to Use It
+
+Just run the app with:
+```bash
+streamlit run main.py
+```
+
+Then select your topic, choose how long you want the post to be, pick your language, and hit "Generate." The model will create a post based on what you've selected.
+
+## Data Processing
+
+I created a preprocessing pipeline that:
+1. Extracts metadata from posts (line count, language, tags)
+2. Standardizes tags to make categorization more consistent
+3. Prepares posts for use as few-shot examples
+
+If you want to process more posts, run:
+```bash
+python preprocessing.py --input data/raw_posts.json --output data/processed_posts.json
+```
+
+## Main Dependencies
+
+- streamlit for the web interface
+- langchain and langchain-groq to handle the LLM interactions
+- python-dotenv for environment management
+- Check requirements.txt for the complete list
+
+## Future Plans
+
+I'm planning to enhance this with:
+- More language support
+- Custom topic input field
+- A larger database of examples
+- Different tone selection options
+- User feedback system to improve generation quality
+
+## License
+
+[Add your license info here]
+
+## Thanks
+
+Special thanks to Groq for providing access to Llama3-70B and to all the LinkedIn content creators whose posts helped me understand different content styles.
