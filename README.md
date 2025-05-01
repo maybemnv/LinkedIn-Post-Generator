@@ -7,11 +7,11 @@ AI-Powered LinkedIn Post Generator
 
 **Features**
 ------------
-✅ **Smart Topic Selection** – Choose from a curated list of **professional categories**.
-✅ **Adjustable Post Length** – Generate **short, medium, or long-form** content based on your needs.
-✅ **Multilingual Support** – Create posts in **English and Hinglish** with natural flow.
-✅ **Few-Shot Learning** – Integrated with **example-based learning** for improved tone and relevance.
-✅ **Streamlined UI** – Built with **Streamlit** for ease of use and quick interaction.
+✅ **Smart Topic Selection** – Choose from a curated list of **professional categories**.\
+✅ **Adjustable Post Length** – Generate **short, medium, or long-form** content based on your needs.\
+✅ **Multilingual Support** – Create posts in **English and Hinglish** with natural flow.\
+✅ **Few-Shot Learning** – Integrated with **example-based learning** for improved tone and relevance.\
+✅ **Streamlined UI** – Built with **Streamlit** for ease of use and quick interaction.\
 ✅ **Custom Preprocessing** – Includes tools for **metadata extraction**, **tag standardization**, and **data preparation**.
 
 **Installation & Setup**
