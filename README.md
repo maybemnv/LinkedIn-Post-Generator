@@ -1,74 +1,69 @@
-# LinkedIn Post Generator
+AI-Powered LinkedIn Post Generator
+====================================
 
-I built this Streamlit application to help generate engaging LinkedIn posts using LLMs. It selects from different topics, lengths, and languages to create content that feels authentic and professional.
+**Overview**
+------------
+**LinkedIn Post Generator** is an AI-powered tool that helps you craft **engaging, authentic, and professional LinkedIn posts** effortlessly. It uses **Llama3-70B via Groq's API** to generate content based on **chosen topics, lengths, and languages**, ensuring consistency and creativity in your online presence.
 
-## Why I Built This
+**Features**
+------------
+✅ **Smart Topic Selection** – Choose from a curated list of **professional categories**.\
+✅ **Adjustable Post Length** – Generate **short, medium, or long-form** content based on your needs.\
+✅ **Multilingual Support** – Create posts in **English and Hinglish** with natural flow.\
+✅ **Few-Shot Learning** – Integrated with **example-based learning** for improved tone and relevance.\
+✅ **Streamlined UI** – Built with **Streamlit** for ease of use and quick interaction.\
+✅ **Custom Preprocessing** – Includes tools for **metadata extraction**, **tag standardization**, and **data preparation**.
 
-After noticing how time-consuming it can be to write quality LinkedIn posts consistently, I wanted to create a tool that could help streamline this process. The app leverages Llama3-70B (via Groq's API) to generate posts that match specific topics and styles.
+**Installation & Setup**
+------------------------
+**1. Clone the Repository**
 
-## Features
-
-- **Topic Selection**: Pick from various professional topics I've categorized
-- **Adjustable Length**: Generate short, medium, or long posts depending on your needs
-- **Language Options**: Works with both English and Hinglish content
-- **Few-Shot Learning**: I implemented examples to help the model understand the right tone and style
-- **Simple UI**: Built with Streamlit for a straightforward user experience
-
-## Setting Up
-
-1. Clone my repo:
 ```bash
 git clone https://github.com/maybemnv/LinkedIn-Post-Generator.git
 cd linkedin-post-generator
 ```
 
-2. Install dependencies:
+**2. Install Required Packages**
+
 ```bash
 pip install -r requirements.txt
 ```
 
-3. You'll need to set up a `.env` file with your own Groq API key:
+**3. Configure API Key**
+
+Create a `.env` file in the root directory and add your Groq API key:
+
 ```
 GROQ_API_KEY=your_groq_api_key_here
 ```
 
-## How to Use It
+**Usage**
+---------
+Run the application with:
 
-Just run the app with:
 ```bash
 streamlit run main.py
 ```
 
-Then select your topic, choose how long you want the post to be, pick your language, and hit "Generate." The model will create a post based on what you've selected.
+**How to Use:**
+1. Select a **topic** from the dropdown.
+2. Choose the **desired length** (short, medium, or long).
+3. Pick your **preferred language** (English or Hinglish).
+4. Click **"Generate"** to receive your custom LinkedIn post.
 
-## Data Processing
+**Advanced Data Processing**
+---------------------------
+Prepare more training data using the preprocessing script:
 
-I created a preprocessing pipeline that:
-1. Extracts metadata from posts (line count, language, tags)
-2. Standardizes tags to make categorization more consistent
-3. Prepares posts for use as few-shot examples
-
-If you want to process more posts, run:
 ```bash
 python preprocessing.py --input data/raw_posts.json --output data/processed_posts.json
 ```
 
-## Main Dependencies
+This will:
+* Extract post metadata
+* Standardize tags for consistency
+* Format examples for few-shot learning
 
-- streamlit for the web interface
-- langchain and langchain-groq to handle the LLM interactions
-- python-dotenv for environment management
-- Check requirements.txt for the complete list
-
-## Future Plans
-
-I'm planning to enhance this with:
-- More language support
-- Custom topic input field
-- A larger database of examples
-- Different tone selection options
-- User feedback system to improve generation quality
-
-## Thanks
-
-Special thanks to Groq for providing access to Llama3-70B and to all the LinkedIn content creators whose posts helped me understand different content styles.
+**Contributing**
+---------------
+Contributions and suggestions are welcome! Please ensure any changes are clean, well-documented, and tested.
