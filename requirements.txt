@@ -5,4 +5,3 @@ langchain-community==0.2.12
 langchain_groq==0.1.9
 pandas==2.0.2
 llm
--e .
